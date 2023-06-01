@@ -98,6 +98,10 @@ DATABASES = {
         "OPTIONS": {
             "driver": "ODBC Driver 17 for SQL Server",
         },
+    },
+    "blog":{
+        'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': BASE_DIR / 'db.sqlite3',       
     }
 }
 
