@@ -87,19 +87,19 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 # 
 # =============================================================================
 DATABASES = {
-    "default": {
-        "ENGINE": "mssql",
-        "NAME": "DBforDjango",
-        "HOST":"localhost",
-        "PORT":"",
-        "USER":"sa",
-        "PASSWORD":"wantsinc",
+    # "default": {
+    #     "ENGINE": "mssql",
+    #     "NAME": "DBforDjango",
+    #     "HOST":"localhost",
+    #     "PORT":"",
+    #     "USER":"sa",
+    #     "PASSWORD":"wantsinc",
         
-        "OPTIONS": {
-            "driver": "ODBC Driver 17 for SQL Server",
-        },
-    },
-    "blog":{
+    #     "OPTIONS": {
+    #         "driver": "ODBC Driver 17 for SQL Server",
+    #     },
+    # },
+    "default":{
         'ENGINE': 'django.db.backends.sqlite3',
        'NAME': BASE_DIR / 'db.sqlite3',       
     }
