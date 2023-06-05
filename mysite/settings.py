@@ -159,3 +159,5 @@ mimetypes.add_type(("application/javascript"), ".js", True)
 
 from django.contrib.admin import AdminSite
 AdminSite.site_header = "Polls Administration second"
+
+LOGIN_REDIRECT_URL = '/'
