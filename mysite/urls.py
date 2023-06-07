@@ -18,13 +18,16 @@ from django.urls import include,path
 from django.conf import settings
 from django.contrib.auth import views
 
+from django.conf.urls.static import static
+
 urlpatterns = [
-    path("polls/", include("polls.urls")),
-    path("", include("blog.urls")),
-    path('accounts/login/', views.LoginView.as_view(), name='login'),
-    path('accounts/logout/', views.LogoutView.as_view(next_page='/'), name='logout'),
-    path("admin/", admin.site.urls),
-]
+    path("testenv/polls/", include("polls.urls")),
+    path("testenv/", include("blog.urls")),
+    path('testenv/accounts/login/', views.LoginView.as_view(), name='login'),
+    # path('testenv/accounts/logout/', views.LogoutView.as_view(next_page='/'), name='logout'),
+    path('testenv/accounts/logout/', views.LogoutView.as_view(next_page='post_list'), name='logout'),
+    path("testenv/admin/", admin.site.urls),
+] +  static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 # if settings.DEBUG:
 #     import debug_toolbar
